@@ -1,0 +1,30 @@
+main {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.image {
+    width: 15rem;
+    height: 20rem;
+    margin: 1rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    margin: .5rem 0;
+}
+
+.detals {
+    margin-top: 2rem;
+}

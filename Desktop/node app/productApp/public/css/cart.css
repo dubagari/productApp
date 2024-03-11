@@ -1,0 +1,23 @@
+/** @format */
+
+.btn:hover {
+  background: #0d0453;
+}
+
+.cartItems {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #666464 solid 0.05rem;
+  padding: 1rem 2rem;
+}
+.cartItems li {
+  margin-top: 1rem;
+}
+
+.create-order {
+  text-align: center;
+  margin-top: 3rem;
+}

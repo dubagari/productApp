@@ -1,0 +1,44 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/add-product.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <section>
+                <div class="form-contain">
+
+                    <form action="/admin/<% if(editing) {%>edit-product<% } else {%>add-product<% } %>" method="post">
+                        <div class="for-box">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" value="<% if(editing) { %><%= product.title %><% } %>"
+                                required>
+                        </div>
+                        <div class="for-box">
+                            <label for="image">Image</label>
+                            <input type="text" name="imageUrl" value="<% if(editing) { %><%= product.imageUrl %><% } %>"
+                                required>
+                        </div>
+                        <div class="for-box">
+                            <label for="price">Price</label>
+                            <input type="number" step="0.01" name="price"
+                                value="<% if(editing) { %><%= product.price %><% } %>" required>
+                        </div>
+                        <div class="for-box">
+                            <label for="description">Description</label>
+                            <textarea name="description" required rows="5"><% if(editing) { %>
+                                <%= product.description %>
+                                    <% } %></textarea>
+                        </div>
+                        <% if(editing) { %>
+                            <input type="hidden" value="<%=product._id %>" name="productId">
+                            <% } %>
+                                <button class="btn" type="submit">
+                                    <% if(editing) { %> update product <% } else {%> Add Product <% } %>
+                                </button>
+
+                    </form>
+
+
+                </div>
+            </section>
+            <%- include('../includes/end.ejs') %>

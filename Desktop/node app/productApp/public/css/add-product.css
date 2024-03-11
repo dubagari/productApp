@@ -1,0 +1,51 @@
+.form-contain {
+    min-width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: #0d0453;
+    width: 50%;
+    height: 100%;
+    padding: 2rem 4rem;
+}
+
+.for-box {
+    margin-bottom: 1rem;
+}
+
+.for-box input,
+.for-box textarea {
+    width: 100%;
+    height: 1rem;
+    padding: 1rem;
+}
+
+.for-box label {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.for-box textarea {
+    height: 10rem;
+}
+
+.form-contain .btn {
+    padding: .6rem 1.5rem;
+    text-transform: capitalize;
+    border: .1rem solid #ef1c1c;
+    transition: .3s;
+    /* border: none; */
+    color: #fff;
+    border-radius: .4rem;
+}
+
+.form-contain .btn:hover {
+    /* background: #0d0453; */
+    border: .1rem solid #0d0453;
+    color: #0d0453;
+    background: #fff;
+}

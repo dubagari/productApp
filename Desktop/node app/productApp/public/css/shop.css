@@ -1,0 +1,72 @@
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.box-container .box {
+    width: 23rem;
+    height: 32rem;
+    text-align: center;
+
+    gap: 1.5rem;
+    border: solid #444;
+
+}
+
+.box-container .box .image {
+    /* background: red; */
+    height: 15rem;
+    width: 15rem;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+.box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box h2 {
+    margin: 1.3rem 0;
+    text-transform: capitalize;
+}
+
+.box-info {
+    padding: 1rem;
+}
+
+.box-info .product-price,
+.description {
+    margin-top: .7rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.image {
+    margin-top: 2rem;
+    width: 15rem;
+    height: 20rem;
+    margin: 2rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    margin-bottom: 1.3rem;
+}
+
+.product-info h3 {
+    margin-bottom: .5rem;
+}
+
+.btn {
+    cursor: pointer;
+}
