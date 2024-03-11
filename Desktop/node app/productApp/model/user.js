@@ -84,6 +84,9 @@ class User {
         { $set: { cart: { items: updatedCartItem } } }
       );
   }
+
+  addOrder() {}
+
   static findById(userId) {
     const db = getDb();
     return db
