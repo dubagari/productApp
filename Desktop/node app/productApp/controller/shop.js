@@ -56,18 +56,18 @@ exports.getproductlis = (req, res, next) => {
 //     .catch((err) => console.log(err));
 // };
 
-// exports.getCart = (req, res, next) => {
-// req.user
-//   .getCart()
-//   .then((products) => {
-//     res.render("shop/cart", {
-//       pageTitle: "cart",
-//       path: "/cart",
-//       products: products,
-//     });
-//   })
-//   .catch((err) => console.log(err));
-// };
+exports.getCart = (req, res, next) => {
+  req.user
+    .getCart()
+    .then((products) => {
+      res.render("shop/cart", {
+        pageTitle: "cart",
+        path: "/cart",
+        products: products,
+      });
+    })
+    .catch((err) => console.log(err));
+};
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId;
