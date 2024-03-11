@@ -85,7 +85,9 @@ class User {
       );
   }
 
-  addOrder() {}
+  addOrder() {
+    const db = getDb();
+  }
 
   static findById(userId) {
     const db = getDb();
