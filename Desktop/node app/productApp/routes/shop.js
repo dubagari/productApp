@@ -20,6 +20,6 @@ routes.post("/cart", shopController.postCart);
 
 // routes.post("/order", shopController.postOrder);
 
-// routes.post("/cart-delete-items", shopController.postCartDelete);
+routes.post("/cart-delete-items", shopController.postCartDelete);
 
 module.exports = routes;
