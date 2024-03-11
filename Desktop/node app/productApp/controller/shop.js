@@ -47,14 +47,14 @@ exports.getproductlis = (req, res, next) => {
 //   });
 // };
 
-// exports.postOrder = (req, res, next) => {
-//   req.user
-//     .addOrder()
-//     .then((result) => {
-//       res.redirect("/order");
-//     })
-//     .catch((err) => console.log(err));
-// };
+exports.postOrder = (req, res, next) => {
+  req.user
+    .addOrder()
+    .then((result) => {
+      res.redirect("/order");
+    })
+    .catch((err) => console.log(err));
+};
 
 exports.getCart = (req, res, next) => {
   req.user
