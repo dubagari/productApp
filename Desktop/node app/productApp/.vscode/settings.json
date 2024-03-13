@@ -1,5 +1,4 @@
 {
-  "audioCues.format": "always",
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -9,5 +8,8 @@
   "prettier.bracketSameLine": true,
   "prettier.enableDebugLogs": true,
   "prettier.jsxSingleQuote": true,
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "accessibility.signals.format": {
+    "sound": "always"
+  }
 }

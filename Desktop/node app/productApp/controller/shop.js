@@ -40,12 +40,15 @@ exports.getproductlis = (req, res, next) => {
     .catch((err) => console.log(err));
 };
 
-// exports.getOrder = (req, res, next) => {
-//   res.render("shop/order", {
-//     pageTitle: "Order",
-//     path: "/order",
-//   });
-// };
+exports.getOrder = (req, res, next) => {
+  req.user.getOrder().then((order) => {
+    res.render("shop/order", {
+      pageTitle: "Order",
+      path: "/order",
+      order: order,
+    });
+  });
+};
 
 exports.postOrder = (req, res, next) => {
   req.user

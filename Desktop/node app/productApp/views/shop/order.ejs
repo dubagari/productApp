@@ -9,6 +9,25 @@
         <%- include('../includes/navigation.ejs') %>
 
             <section>
-               <h1>order page</h1>
+                <% if(order.length <= 0) { %> 
+                <h1>No order to make</h1>
+                <% } else { %>
+                    <ul class="order">
+                        <% order.forEach(orders=>{ %>
+                        <li class="order_items">
+                            <h1>Order - # <%= orders._id %></h1>
+                            <ul class="order_products">
+                                <% orders.items.forEach(product => { %> 
+                                    <li class="order_list">
+                                        <%= product.name %> <%= product.title %> (<%= product.quantity %>)
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </li>
+                        <% }) %>
+                    </ul>
+
+                    <% } %>
+               
             </section>
             <%- include('../includes/end.ejs') %>

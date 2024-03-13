@@ -16,7 +16,7 @@ routes.get("/cart", shopController.getCart);
 
 routes.post("/cart", shopController.postCart);
 
-// routes.get("/order", shopController.getOrder);
+routes.get("/order", shopController.getOrder);
 
 routes.post("/order", shopController.postOrder);
 
