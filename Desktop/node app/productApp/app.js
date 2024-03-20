@@ -3,11 +3,11 @@
 const express = require("express");
 
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const path = require("path");
 
 const rooRouter = require("./util/path");
-const mongoConnect = require("./util/database").mongoConnect;
 
 const shopRoute = require("./routes/shop");
 const adminRoutes = require("./routes/admin");
@@ -23,9 +23,9 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 app.use((req, res, next) => {
-  User.findById("65ec75b6eaca04c2015b5834")
+  User.findById("65f6af336df01266c0003f4c")
     .then((user) => {
-      req.user = new User(user.name, user.email, user.cart, user._id);
+      req.user = user;
       next();
     })
     .catch((err) => console.log(err));
@@ -35,6 +35,26 @@ app.use("/admin", adminRoutes);
 app.use(shopRoute);
 app.use(error404.error404);
 
-mongoConnect(() => {
-  app.listen(3000);
-});
+mongoose
+  .connect(
+    "mongodb+srv://dubagari:dubagari@dubagari1.nmpipjp.mongodb.net/?retryWrites=true&w=majority&appName=dubagari1"
+  )
+  .then((result) => {
+    User.findOne().then((user) => {
+      if (!user) {
+        const user = new User({
+          name: "abubakar",
+          email: " super@gmail.com",
+          cart: {
+            items: [],
+          },
+        });
+        user.save();
+      }
+    });
+
+    app.listen(3000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

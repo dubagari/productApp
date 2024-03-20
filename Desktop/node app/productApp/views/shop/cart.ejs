@@ -17,7 +17,7 @@
                                 <li class="cartItems">
                                     
                                         <h1>
-                                            <%= p.title %>
+                                            <%= p.productId.title %>
                                             
                                         </h1>
                                         <h2>
@@ -25,7 +25,7 @@
                                         </h2>
                                     
                                     <form action="/cart-delete-items" method="post">
-                                        <input type="hidden" value="<%= p._id %>" name="productId">
+                                        <input type="hidden" value="<%= p.productId._id %>" name="productId">
                                         <button type="submit" class="btn"> delete</button>
                                     </form>
                                 </li>
