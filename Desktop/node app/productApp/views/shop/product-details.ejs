@@ -23,10 +23,12 @@
                     </div>
                 </div>
                 <div class="home-btn detals">
+                     <% if(isAuthenticated) { %>
                     <form action="/cart" method="post">
                         <button class="btn" type="submit"> add to cart </button>
                         <input type="hidden" name="productId" value="<%= product._id %>">
                     </form>
+                    <% } %>
                 </div>
             </main>
             < <%- include('../includes/end.ejs') %>

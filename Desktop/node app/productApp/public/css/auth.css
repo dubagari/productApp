@@ -2,7 +2,7 @@
 
 .form-contain {
   min-width: 100%;
-  height: 75vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ form {
   background: #0d0453;
   width: 50%;
   height: 100%;
-  padding: 1rem 4rem;
+  padding: 2rem 4rem;
 }
 
 .for-box {

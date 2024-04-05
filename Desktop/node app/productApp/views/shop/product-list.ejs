@@ -31,10 +31,12 @@
 
                                 <div class="home-btn">
                                     <a href="/product-details/<%= product._id %> " class="btn">details</a>
+                                     <% if(isAuthenticated) { %>
                                     <form action="/cart" method="post">
                                         <button class="btn" type="submit"> add to cart </button>
                                         <input type="hidden" name="productId" value="<%= product._id %>">
                                     </form>
+                                    <% } %>
                                 </div>
                             </div>
                             <% } %>

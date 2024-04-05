@@ -18,6 +18,9 @@
             >Products list</a
           >
         </li>
+
+        <% if(isAuthenticated) { %>
+
         <li>
           <a class="<%= path === '/cart' ? 'active' : ''%>" href="/cart"
             >cart</a
@@ -28,6 +31,7 @@
             >Order</a
           >
         </li>
+
         <li>
           <a
             class="<%= path === '/admin/add-product' ? 'active' : ''%>"
@@ -42,7 +46,24 @@
             product</a
           >
         </li>
+
+        <% } %>
       </ul>
     </nav>
+    <div class="auth">
+      <% if(!isAuthenticated) { %>
+      <div class="login">
+        <a class="<%= path === '/login' ? 'active' : ''%>" href="/login">
+          login</a
+        >
+      </div>
+      <% } else { %>
+      <div class="logout">
+        <form action="/logout" method="post">
+          <button class="logout">logout</button>
+        </form>
+      </div>
+      <% } %>
+    </div>
   </div>
 </header>
