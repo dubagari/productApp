@@ -31,9 +31,9 @@
                         </div>
                         <% if(editing) { %>
                             <input type="hidden" value="<%=product._id %>" name="productId">
-                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
                             <% } %>
-                                <button class="btn" type="submit">
+                            <button class="btn" type="submit">
+                                    <input type="hidden" value="<%= csrfToken %>" name="_csrf">
                                     <% if(editing) { %> update product <% } else {%> Add Product <% } %>
                                 </button>
 
