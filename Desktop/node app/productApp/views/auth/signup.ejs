@@ -7,9 +7,7 @@
             <section>
                 <div class="form-contain">
 
-                    
-                    <form action="/login" method="post">
-                       
+                    <form action="/signup" method="post">
                         <div class="for-box">
                             <label for="email">E-mail</label>
                             <input type="email" name="email"
@@ -21,20 +19,22 @@
                               <input type="password" name="password" 
                                  >
                           </div>
+                          <div class="for-box">
+                              <label for="password">confirm password</label>
+                              <input type="password" name="confirmpassword" 
+                                 >
+                          </div>
                        
                        
                                 <button class="btn" type="submit">
-                                    login 
                                     <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                    sign up
                                 </button>
-
-                                <div class="center">
-                                    <a href="/reset">reset password</a>
-                                </div>
 
                                  <% if (errorMassage) { %>
                             <p class="massage"><%= errorMassage %></p>
                         <% } %>
+
                     </form>
 
 

@@ -56,11 +56,15 @@
         <a class="<%= path === '/login' ? 'active' : ''%>" href="/login">
           login</a
         >
+        <a class="<%= path === '/signup' ? 'active' : ''%>" href="/signup">
+          sign up</a
+        >
       </div>
       <% } else { %>
       <div class="logout">
         <form action="/logout" method="post">
           <button class="logout">logout</button>
+          <input type="hidden" value="<%= csrfToken %>" name="_csrf" />
         </form>
       </div>
       <% } %>

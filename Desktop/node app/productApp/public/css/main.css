@@ -72,11 +72,13 @@ a {
   color: #ef1c1c;
 }
 
-.auth {
+.auth,
+.login {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
+
 nav ul li a:hover,
 .auth .login a:hover,
 .active {

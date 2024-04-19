@@ -8,7 +8,7 @@
                 <div class="form-contain">
 
                     
-                    <form action="/login" method="post">
+                    <form action="/reset" method="post">
                        
                         <div class="for-box">
                             <label for="email">E-mail</label>
@@ -16,21 +16,14 @@
                             >
                         </div>
                         
-                          <div class="for-box">
-                              <label for="password">password</label>
-                              <input type="password" name="password" 
-                                 >
-                          </div>
+                        
                        
                        
                                 <button class="btn" type="submit">
-                                    login 
+                                    reset password
                                     <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                    
                                 </button>
-
-                                <div class="center">
-                                    <a href="/reset">reset password</a>
-                                </div>
 
                                  <% if (errorMassage) { %>
                             <p class="massage"><%= errorMassage %></p>
